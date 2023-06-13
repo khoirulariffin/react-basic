@@ -1,11 +1,12 @@
-import ExpensesItem from "../ExpensesItem/ExpensesItem";
+import Card from "../Card";
+import ExpensesItem from "../ExpensesItem";
 import "./style.css";
 
 import React from "react";
 
 function Expenses({ items }) {
   return (
-    <main className="expenses ">
+    <Card className="expenses ">
       {items.map((e) => (
         <ExpensesItem
           key={e.id}
@@ -14,7 +15,7 @@ function Expenses({ items }) {
           date={e.date}
         />
       ))}
-    </main>
+    </Card>
   );
 }
 export default Expenses;
