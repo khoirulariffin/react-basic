@@ -1,5 +1,5 @@
 import "./App.css";
-import ExpensesItem from "./components/ExpensesItem/ExpensesItem";
+import Expenses from "./components/Expenses/Expenses";
 
 function App() {
   const expenses = [
@@ -25,15 +25,8 @@ function App() {
   ];
 
   return (
-    <main className="expenses">
-      {expenses.map((e) => (
-        <ExpensesItem
-          key={e.id}
-          title={e.title}
-          price={e.amount}
-          date={e.date}
-        />
-      ))}
+    <main>
+      <Expenses items={expenses} />
     </main>
   );
 }
