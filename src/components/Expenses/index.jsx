@@ -1,12 +1,14 @@
-import Card from "../Card";
-import ExpensesItem from "../ExpensesItem";
+import Card from "../Card/index";
+import ExpensesFilter from "./ExpensesFilter";
+import ExpensesItem from "./ExpensesItem";
 import "./style.css";
 
 import React from "react";
 
-function Expenses({ items }) {
+const Expenses = ({ items }) => {
   return (
-    <Card className="expenses ">
+    <Card className="expenses">
+      <ExpensesFilter />
       {items.map((e) => (
         <ExpensesItem
           key={e.id}
@@ -17,5 +19,5 @@ function Expenses({ items }) {
       ))}
     </Card>
   );
-}
+};
 export default Expenses;
