@@ -27,7 +27,6 @@ const App = () => {
 
   const addExpenseHandler = (payload) => {
     expenses.push(payload);
-    console.log(expenses);
   };
 
   return (
