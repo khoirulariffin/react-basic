@@ -12,7 +12,9 @@ const Expenses = ({ items }) => {
     const filteredItems = items.filter(
       (item) => item.date.getFullYear() === +payload
     );
-    setNewItems(filteredItems);
+    typeof payload !== "string"
+      ? setNewItems(items)
+      : setNewItems(filteredItems);
   };
 
   return (
