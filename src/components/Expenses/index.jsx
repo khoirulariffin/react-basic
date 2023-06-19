@@ -3,7 +3,7 @@ import ExpensesFilter from "./ExpensesFilter";
 import ExpensesItem from "./ExpensesItem";
 import "./style.css";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const Expenses = ({ items }) => {
   const [newItems, setNewItems] = useState(items);
@@ -16,6 +16,10 @@ const Expenses = ({ items }) => {
       ? setNewItems(items)
       : setNewItems(filteredItems);
   };
+
+  useEffect(() => {
+    filteredExpense();
+  }, [items]);
 
   return (
     <Card className="expenses">
