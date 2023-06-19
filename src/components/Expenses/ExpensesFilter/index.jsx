@@ -13,6 +13,8 @@ const ExpensesFilter = (props) => {
     props.onFilteredExpense(!filteredYear ? years : filteredYear);
   };
 
+  useEffect(() => {}, [props.items]);
+
   return (
     <div className="expenses-filter">
       <div className="expenses-filter__control">
@@ -28,7 +30,7 @@ const ExpensesFilter = (props) => {
           })}
         </select>
       </div>
-      {!textYear ? "" : <p>Data for years {textYear.join(", ")} is hiden</p>}
+      {props.items.length === 0 ? "No expenses found" : ""}
     </div>
   );
 };

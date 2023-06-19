@@ -23,7 +23,7 @@ const Expenses = ({ items }) => {
 
   return (
     <Card className="expenses">
-      <ExpensesFilter onFilteredExpense={filteredExpense} />
+      <ExpensesFilter onFilteredExpense={filteredExpense} items={newItems} />
       {newItems.map((e) => (
         <ExpensesItem
           key={e.id}
