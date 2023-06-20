@@ -1,4 +1,5 @@
 import Card from "../Card/index";
+import ExpensesChart from "./ExpensesChart";
 import ExpensesFilter from "./ExpensesFilter";
 import ExpensesItem from "./ExpensesItem";
 import "./style.css";
@@ -24,6 +25,7 @@ const Expenses = ({ items }) => {
   return (
     <Card className="expenses">
       <ExpensesFilter onFilteredExpense={filteredExpense} items={newItems} />
+      <ExpensesChart expenses={newItems} />
       {newItems.map((e) => (
         <ExpensesItem
           key={e.id}
