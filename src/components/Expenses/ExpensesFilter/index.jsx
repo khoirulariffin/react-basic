@@ -30,7 +30,7 @@ const ExpensesFilter = (props) => {
           })}
         </select>
       </div>
-      {props.items.length === 0 ? "No expenses found" : ""}
+      {props.items.length === 0 && "No expenses found"}
     </div>
   );
 };
